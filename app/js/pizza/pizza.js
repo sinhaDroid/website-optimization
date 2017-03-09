@@ -457,7 +457,7 @@ var resizePizzas = function(size) {
   	// of the element
     var newwidth = (document.querySelector(".randomPizzaContainer").offsetWidth + dx) + 'px';
     // Select all of the .randomPizzaContainer elements in the DOM
-    var elements = document.querySelectorAll(".randomPizzaContainer");
+    var elements = document.getElementsByClassName("randomPizzaContainer");
     // Loop throught all the .randomPizzaContainer elements in the DOM
     // and appy a new width value
     for (var i = elements.length; i--;) {
@@ -476,9 +476,9 @@ var resizePizzas = function(size) {
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
+var pizzasDiv = document.getElementById("randomPizzas");
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -518,7 +518,7 @@ function updatePositions() {
     var phase = Math.sin( top + (i % 5));
     //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
     var left = -items[i].basicLeft + 1000 * phase + 'px';
- 		items[i].style.transform = "translateX("+left+") translateZ(0)";
+ 		items[i].style.transform = 'translateX(' + 100 * phase + 'px)';;
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -549,6 +549,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.src = "../public/img/pizza-slider.png";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    elem.style.left = (i % cols) * s + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
   updatePositions();
