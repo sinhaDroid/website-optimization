@@ -6,16 +6,12 @@ Project #4 of Udacity's [Front-End Web Developer Nanodegree](https://www.udacity
 
 ##Getting Started
 
-######Live
-
-Point your browser to http://optimization.mikejoyce.io
-
 ######Locally
 
 **1.** Clone this repo:
 
 ```
-$ git clone https://github.com/mikejoyceio/website-optimization
+$ git clone https://github.com/sinhaDroid/website-optimization.git
 ````
 
 **2.** Serve the website:

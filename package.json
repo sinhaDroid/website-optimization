@@ -1,11 +1,11 @@
 {
-  "name": "your-app",
-  "description": "Description",
-  "author": "Your Name",
+  "name": "website-optimization",
+  "description": "Optimizing the Pizza Website",
+  "author": "Deepanshu Sinha",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/sinhaDroid/website-optimization.git"
   },
   "scripts": {
     "start": "brunch watch --server",
